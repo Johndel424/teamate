@@ -1,0 +1,634 @@
+body.custom-bg.dark-mode {
+    color: #000000;
+    background-color: #ffffff;
+  }
+  
+  header.dark-mode {
+    background-color: rgba(242, 232, 232, 0.1); /* Light color with transparency */
+    color: #2E3740;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body.custom-bg {
+  background-color: #2E3740;
+}
+
+header  {
+    z-index: 999;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.1); /* Light color with transparency */
+    color: #ccc;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    height: 70px;
+    font-family: 'Agdasima', sans-serif;
+   
+}
+
+.logo img {
+    max-height: 50px; /* Adjust this to the appropriate size for your logo */
+    margin-right: 5px;
+    background-color: #ffffff;
+}
+
+.heading {
+    font-size: 24px;
+    margin: 0;
+}
+
+  
+ 
+
+
+ 
+ /* starts assistive-touch */
+.assistive-touch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.main-icon img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+}
+
+.menu-icon {
+    margin: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.menu-icon:hover {
+    background-color: #555;
+}
+
+.menu-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/* end */
+
+
+/* phone cover photo */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 50px;
+}
+.spacer{
+    height: 50px; /* Adjust the height to create the desired amount of space */
+    width: 100%; /* This ensures the div spans the entire width */
+  
+}
+
+.floating-photo-holder {
+  width: 350px; /* Adjust this value to set the width of the holder */
+  height: 400px; /* Adjust this value to set the height of the holder */
+  position: relative;
+  top: -50px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3); /* Adjust shadow values */
+  transition: transform 0.3s ease-in-out;
+}
+
+.floating-photo-holder:hover {
+  transform: translateY(-10px); /* Adjust the amount of "floating" effect */
+}
+
+.floating-photo-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* laptop cover photo */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns */
+  gap: 20px; /* Adjust the gap between items */
+}
+
+.floating-photo-holder {
+  width: 300px; /* Adjust this value to set the width of the holder */
+  height: 300px; /* Adjust this value to set the height of the holder */
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3); /* Adjust shadow values */
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.floating-photo-holder:hover {
+  transform: translateY(-10px) scale(1.1); /* Adjust the amount of "floating" effect and zoom scale */
+}
+
+.floating-photo-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+  /* Media query for smaller screens */
+  @media (max-width: 500px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+    .gallery img {
+      width: 90%;
+      height: 200px;
+    }
+    .floating-photo-holder {
+      width: 330px; /* Adjust this value to set the width of the holder */
+      height: 400px; /* Adjust this value to set the height of the holder */
+      position: relative;
+      top: -100px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3); /* Adjust shadow values */
+      transition: transform 0.3s ease-in-out;
+      justify-content: center;
+    }
+    #carouselExampleAutoplaying button
+    {
+      top: -200px;
+      color: #121212;
+    }
+    .background{
+      /* background-color: #0056b3; */
+      
+    }
+    
+    .centered 
+    {
+      display: none;
+    }
+    .boxi
+    {
+      display: none;
+    }
+    .gallery {
+      display: none;
+    }
+    .photos {
+      display: none;
+    }
+        /* line to */
+    .cut-line {
+      width: 100%;
+      height: 1px;
+      top: -180px;
+      background-color: black;
+      position: relative;
+      margin: 20px 0; /* Adjust the margin to position the line */
+    }
+    
+    /* text-box in phone */
+    .boxx
+    {
+      border: #ccc solid 2px;
+      border-radius: 15px;
+      height: 300px;
+      width: auto;
+      padding: 20px;
+      margin-top: -100px;
+      margin-bottom: 100px;
+      justify-content: center;
+      background-color: #ccc;
+      text-align: center;
+      font-family: 'Agdasima', sans-serif;
+    }
+    .boxx h1{
+      margin-top: 10px;
+      font-weight: 300;
+    }
+    .message {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .centered-button {
+      background-color: transparent;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: #0b0b0b solid 2px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 5
+      px;
+    }
+    .centered-button:hover {
+      background-color: #0056b3; /* New background color on hover */
+      color: #fff; /* New text color on hover */
+    }
+    .centered-link {
+      background-color: #070707;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      text-decoration: none; /* Remove default underline */
+      transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+    }
+
+    .centered-link:hover {
+      background-color: #047af8; /* New background color on hover */
+      color: #fff; /* New text color on hover */
+    }
+
+    
+
+    .container-box {
+      display: row;
+      justify-content: center; /* Magkakalayo ang mga element sa gilid */
+      align-items: center; /* I-center ang mga element vertically */
+      padding: 20px 25px; /* top/bottom 20px, left/right 30px */
+    }
+
+    .box-custom{
+      margin-bottom: 20px; /* Add margin to create space between boxes */
+      border-radius: 20px;
+      
+    }
+    .box-custom img{
+     
+      border-radius: 20px;
+    }
+    .box {
+      width: auto;
+      height: 300px;
+      position: relative; /* Required for positioning */
+      color: rgb(187, 21, 21);
+      text-align: center;
+      line-height: 100px;
+      border: #000000 solid 2px;
+     
+    }
+    .container-boxxex {
+      display: row;
+      justify-content: center; /* Magkakalayo ang mga element sa gilid */
+      align-items: center; /* I-center ang mga element vertically */
+      padding: 30px 50px; /* top/bottom 20px, left/right 30px */
+    }
+  
+    .boxxex {
+      width: auto;
+      height: 250px;
+      position: relative; /* Required for positioning */
+      color: rgb(187, 21, 21);
+      text-align: center;
+      line-height: 100px;
+      border: #000000 solid 2px;
+      justify-content: center;
+     
+    }
+    .boxxex img {
+      width: 100%; /* Cover the entire width of the box */
+      height: 100%; /* Maintain aspect ratio */
+      object-fit: cover;
+    }
+
+    
+    .textt {
+      position: absolute; /* Position the text on top of the image */
+      top: 40%; /* Position it vertically */
+      left: 0; /* Position it horizontally */
+      right: 0;
+      transform: translateY(-50%); /* Adjust for vertical centering */
+      font-family: 'Agdasima', sans-serif;
+      font-weight: 600;
+      font-size: 55px;
+      color: #ccc;
+    }
+    .textto{
+      position: absolute; /* Position the text on top of the image */
+      top: 50%; /* Position it vertically */
+      left: 0; /* Position it horizontally */
+      right: 0;
+      transform: translateY(10%); /* Adjust for vertical centering */
+      font-family: 'Agdasima', sans-serif;
+      font-weight: 200;
+      font-size: 25px;
+      color: #ccc;
+      background-color: rgba(0, 0, 0, 0.7);
+      
+    }
+    .box .image-text {
+      position: absolute;
+      bottom: 10px; /* Adjust the positioning as needed */
+      left: 10px; /* Adjust the positioning as needed */
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 5px 10px;
+      height: 100px;
+      border-radius: 3px;
+      font-family: 'Agdasima', sans-serif;
+      font-weight: 600;
+      font-size: 25px;
+    }
+    .box img {
+      width: 100%; /* Cover the entire width of the box */
+      height: 100%; /* Maintain aspect ratio */
+      object-fit: cover;
+    }
+
+
+
+  }
+
+            @media (min-width: 601px) {
+              #carouselExampleAutoplaying {
+                  display: none;
+              }
+              .boxx{
+                display: none;
+              }
+              .container-box{
+                display: none;
+              }
+                  /* line to */
+              .cut-line {
+                display: none;
+              }
+              
+              .container-boxxex{
+                display: none;
+              }
+            /* members styles */
+            .gallery {
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+              grid-gap: 10px;
+              padding: 10px;
+              align-items: center;
+              justify-content: center;
+              margin-left: auto;
+              margin-right: auto;
+              width: auto;
+              padding-top: 40px;
+              
+            }
+            .custom{
+              margin-left: 15px;
+            }
+            
+            .gallery .image-container {
+              width: 100%;
+              height: 0;
+              padding-bottom: 100%; /* Maintain a 1:1 aspect ratio */
+              position: relative;
+              overflow: hidden;
+              
+            }
+            
+            .gallery img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover; /* Make the image cover the container */
+              /* border-radius: 5px; */
+              border: 1px solid #000000;
+            }
+            .gallery .image-text {
+              position: absolute;
+              bottom: 10px; /* Adjust the positioning as needed */
+              left: 10px; /* Adjust the positioning as needed */
+              color: white;
+              background-color: rgba(0, 0, 0, 0.7);
+              padding: 5px 10px;
+              border-radius: 3px;
+              font-family: 'Agdasima', sans-serif;
+              font-weight: 300;
+              font-size: 25px;
+              
+            }
+            .photos {
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+              grid-gap: 20px;
+              padding: 20px;
+              align-items: center;
+              justify-content: center;
+              margin-left: auto;
+              margin-right: auto;
+              width: auto;
+              padding-top: 40px;
+              
+            }
+            .custom{
+              margin-left: 15px;
+            }
+            
+            .photos .photos-container {
+              width: 100%;
+              height: 0;
+              padding-bottom: 100%; /* Maintain a 1:1 aspect ratio */
+              position: relative;
+              overflow: hidden;
+              border-radius: 20px;
+            }
+            
+            .photos img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover; /* Make the image cover the container */
+              /* border-radius: 5px; */
+              border: 2px solid #000000;
+              border-radius: 20px;
+            }
+            .textt {
+              position: absolute; /* Position the text on top of the image */
+              top: 50%; /* Position it vertically */
+              left: 0; /* Position it horizontally */
+              right: 0;
+              transform: translateY(-50%); /* Adjust for vertical centering */
+              font-family: 'Agdasima', sans-serif;
+              font-weight: 600;
+              font-size: 55px;
+              color: red;
+             
+              text-align: center;
+            }
+            .textto{
+              position: absolute; /* Position the text on top of the image */
+              top: 55%; /* Position it vertically */
+              left: 0; /* Position it horizontally */
+              right: 0;
+              transform: translateY(10%); /* Adjust for vertical centering */
+              font-family: 'Agdasima', sans-serif;
+              font-weight: 200;
+              font-size: 25px;
+              color: #ccc;
+              background-color: rgba(0, 0, 0, 0.7);
+              text-align: center;
+            }
+
+            
+        /* text-box in laptop */
+        .boxi
+        {
+          border: #ccc solid 2px;
+          border-radius: 15px;
+          max-height: 310px;
+          max-width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: auto ;
+          margin-bottom: 30px;
+          justify-content: center;
+          background-color: #ccc;
+          text-align: center;
+          font-family: 'Agdasima', sans-serif;
+        }
+        .boxi h1{
+          margin-top: 10px;
+          font-weight: 300;
+        }
+        .messagi {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+    
+        .centered-button {
+          background-color: transparent;
+          color: #ffffff;
+          padding: 10px 20px;
+          border: #0b0b0b solid 2px;
+          cursor: pointer;
+          border-radius: 5px;
+          font-size: 16px;
+          margin-top: 5
+          px;
+        }
+        .centered-button:hover {
+          background-color: #0056b3; /* New background color on hover */
+          color: #fff; /* New text color on hover */
+        }
+        .centered-link {
+          background-color: #070707;
+          color: #ffffff;
+          padding: 10px 20px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          font-size: 16px;
+          text-decoration: none; /* Remove default underline */
+          transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+        }
+    
+        .centered-link:hover {
+          background-color: #047af8; /* New background color on hover */
+          color: #fff; /* New text color on hover */
+        }
+}
+
+.rotating-icon {
+  display: inline-block;
+  animation: rotate 2s linear infinite;
+}
+
+/* for rotating icon */
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+/* footer */
+.site-footer {
+  background-color: #34495E;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.credits {
+  font-size: 14px;
+}
+
+/* text sa .assistive-touch */
+.menu .text-top{
+  position: absolute;
+  color: #000000;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  opacity: 1;
+  left: -45px;
+  bottom: 157px;
+  font-family: 'Agdasima', sans-serif;
+}
+.menu .text{
+  position: absolute;
+  color: #000000;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  opacity: 1;
+  left: -75px;
+  bottom: 90px;
+  font-family: 'Agdasima', sans-serif;
+}
+.menu .text-2 {
+  position: absolute;
+  color: #000000;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  opacity: 1;
+  left: -60px;
+  bottom: 25px;
+  font-family: 'Agdasima', sans-serif;
+}
