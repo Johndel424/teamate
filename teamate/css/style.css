@@ -195,10 +195,7 @@ header  {
       top: -200px;
       color: #121212;
     }
-    .background{
-      /* background-color: #0056b3; */
-      
-    }
+    
     
     .centered 
     {
@@ -324,13 +321,22 @@ header  {
       line-height: 100px;
       border: #000000 solid 2px;
       justify-content: center;
-     
+      cursor: pointer;
+      overflow: hidden;
     }
     .boxxex img {
       width: 100%; /* Cover the entire width of the box */
       height: 100%; /* Maintain aspect ratio */
       object-fit: cover;
+      transition: transform 0.3s;
     }
+    .boxxex.active {
+      transform: scale(1.5);
+      cursor: zoom-out;
+      z-index: 999;
+      margin-top: 100px;
+    margin-bottom: 100px;
+  }
 
     
     .textt {

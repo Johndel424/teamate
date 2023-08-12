@@ -310,6 +310,25 @@ function performAction(iconNumber) {
     // For example, open a link, show information, etc.
 }
 
+let activeContainer = null;
+
+const imageContainers = document.querySelectorAll('.boxxex');
+
+imageContainers.forEach(container => {
+    container.addEventListener('click', () => {
+        if (activeContainer !== null) {
+            activeContainer.classList.remove('active');
+        }
+        
+        if (activeContainer !== container) {
+            container.classList.add('active');
+            activeContainer = container;
+        } else {
+            activeContainer = null;
+        }
+    });
+});
+
 </script>
 </body>
 </body>
